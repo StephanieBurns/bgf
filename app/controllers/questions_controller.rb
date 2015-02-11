@@ -6,11 +6,15 @@ class QuestionsController < ApplicationController
   def index
     @questions = Question.all
   end
+    def show
+            @images  = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg"]
+            @random_no = rand(4)
+            @random_image = @images[@random_no]
+    end
 
   # GET /questions/1
   # GET /questions/1.json
-  def show
-  end
+
 
   # GET /questions/new
   def new
