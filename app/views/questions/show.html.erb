@@ -1,14 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @question.name %>
-</p>
-
-<p>
-  <strong>Question:</strong>
+  <strong></strong>
   <%= @question.question %>
 </p>
 
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', questions_path %>
+<%= @random_image %><br>
+
+<img src="<%= @random_image%>">
+
+<br><%= link_to 'Ask again...', new_question_path %>
