@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -9,6 +9,9 @@ gem 'bootstrap-generators'
 gem 'therubyracer'
 gem 'less-rails' #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem 'bootstrap-sass'
+gem 'rails_12factor'
+
+# gem 'rails_serve_static_assets' # EASIEST GEM IN THE WORLD! OMG
 
 # Use postgresql as the database for Active Record
 gem 'pg'
