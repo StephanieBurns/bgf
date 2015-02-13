@@ -8,9 +8,17 @@ class QuestionsController < ApplicationController
   end
   
   def show
-    image1 = "https://s3-us-west-1.amazonaws.com/bgf/M.jpg"
+    # images = [
+    #   ""
+    # ]
 
-    @images  = [image1, "https://s3-us-west-1.amazonaws.com/bgf/N.jpg", "https://s3-us-west-1.amazonaws.com/bgf/S.jpg", "https://s3-us-west-1.amazonaws.com/bgf/IMG_9994.gif"]
+    # image1 = image_tag "assets/images/4.png"
+    # image1 = "https://bgf.s3-us-west-1.amazonaws.com/bgf/M.jpg"
+    # image2 = "https://s3-us-west-1.amazonaws.com/bgf/N.jpg"
+    # image3 = "https://s3-us-west-1.amazonaws.com/bgf/S.jpg"
+    # image4 = "https://s3-us-west-1.amazonaws.com/bgf/IMG_9994.gif"
+
+    @images  = ["https://s3-us-west-1.amazonaws.com/bgf/N.jpg", "https://s3-us-west-1.amazonaws.com/bgf/M.jpg", "https://s3-us-west-1.amazonaws.com/bgf/S.jpg", "https://s3-us-west-1.amazonaws.com/bgf/IMG_9994.gif"]
     @random_no = rand(4)
     @random_image = @images[@random_no]
   end
