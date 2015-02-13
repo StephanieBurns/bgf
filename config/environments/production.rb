@@ -3,7 +3,13 @@ Rails.application.configure do
 
   # Code is not reloaded between requests.
   config.cache_classes = true
+STDOUT.sync = true
 
+logger = Logger.new(STDOUT)
+logger.level = 0 # Must be numeric here - 0 :debug, 1 :info, 2 :warn, 3 :error, and 4 :fatal
+# NOTE:   with 0 you're going to get all DB calls, etc.
+
+Rails.logger = Rails.application.config.logger = logger
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
